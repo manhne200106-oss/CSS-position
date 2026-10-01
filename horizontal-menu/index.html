@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu Dropdown ngang</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        #menu {
+            height: 50px;
+            border: 1px solid black;
+            padding: 0;
+            background-color: #333;
+        }
+
+        #menu ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        #menu li {
+            list-style: none;
+            float: left;
+            position: relative;
+        }
+
+        #menu li a {
+            width: 100px;
+            height: 50px;
+            display: block;
+            line-height: 50px;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+        }
+
+        #menu li a:hover {
+            background-color: red;
+        }
+
+        #menu ul ul {
+            position: absolute;
+            top: 50px;
+            left: 0;
+            visibility: hidden;
+        }
+
+        #menu li:hover > ul {
+            visibility: visible;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="menu">
+        <ul>
+            <li>
+                <a href="#">Home</a>
+            </li>
+
+            <li>
+                <a href="#">Products</a>
+                <ul>
+                    <li><a href="#">Laptop</a></li>
+                    <li><a href="#">Phone</a></li>
+                    <li><a href="#">Tablet</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">Services</a>
+                <ul>
+                    <li><a href="#">Design</a></li>
+                    <li><a href="#">Development</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">Contact</a>
+            </li>
+        </ul>
+    </div>
+
+</body>
+</html>
