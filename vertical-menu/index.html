@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu Dropdown dọc</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        #menu {
+            margin: 20px;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+            position: relative;
+            width: 100px;
+            height: 30px;
+            padding: 0 20px;
+            background-color: black;
+            line-height: 30px;
+            cursor: pointer;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        li:hover {
+            background-color: gray;
+        }
+
+        li ul {
+            position: absolute;
+            top: 0;
+            left: 160px;
+            visibility: hidden;
+        }
+
+        li:hover > ul {
+            visibility: visible;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="menu">
+        <ul>
+            <li>
+                <a href="#">Home</a>
+            </li>
+
+            <li>
+                <a href="#">Products</a>
+                <ul>
+                    <li><a href="#">Laptop</a></li>
+                    <li><a href="#">Phone</a></li>
+                    <li><a href="#">Tablet</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">Services</a>
+                <ul>
+                    <li><a href="#">Design</a></li>
+                    <li><a href="#">Development</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">Contact</a>
+            </li>
+        </ul>
+    </div>
+
+</body>
+</html>
