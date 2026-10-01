@@ -1,0 +1,196 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    padding-top: 80px;
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 70px;
+    background-color: #333;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 10px 30px;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.head-link {
+    display: flex;
+    gap: 20px;
+    flex: 1;
+}
+
+.head-link a {
+    color: white;
+    text-decoration: none;
+}
+
+.head-link a:hover {
+    color: #ffcc00;
+    font-weight: bold;
+}
+
+.search {
+    display: flex;
+}
+
+.search input {
+    padding: 8px;
+    border: none;
+}
+
+.search button {
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Content */
+.content {
+    display: flex;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.left-content {
+    width: 250px;
+    background-color: white;
+    padding: 20px;
+}
+
+.left-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.left-content li {
+    margin-bottom: 15px;
+}
+
+.left-content a {
+    color: #333;
+    text-decoration: none;
+}
+
+.left-content a:hover {
+    color: #ff6600;
+    font-weight: bold;
+}
+
+.right-content {
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+}
+
+.video video {
+    display: block;
+    max-width: 100%;
+}
+
+.youtube {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+}
+
+.youtube iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    body {
+        padding-top: 130px;
+    }
+
+    .header {
+        flex-wrap: wrap;
+        padding: 10px 15px;
+        gap: 10px;
+    }
+
+    .head-link {
+        order: 3;
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .search {
+        margin-left: auto;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .left-content {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding-top: 170px;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .logo {
+        text-align: center;
+    }
+
+    .head-link {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .search {
+        width: 100%;
+    }
+
+    .search input {
+        flex: 1;
+    }
+
+    .right-content,
+    .left-content {
+        padding: 15px;
+    }
+}
